@@ -1,1 +1,1 @@
-A repo that contains all my computer vision related learnings.
+A mono repo with all my deep learning models, APIs and research on computer vision.
