@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service SampleService {
+    rpc SampleMethod(SampleRequest) returns (SampleResponse) {}
+}
+
+message SampleRequest{
+    string id = 1;
+}
+
+message EmptyRequest{
+}
+
+message SampleResponse{
+    int32 status = 1;
+    string data = 2;
+}
