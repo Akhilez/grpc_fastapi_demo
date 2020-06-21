@@ -17,12 +17,18 @@ fileConfig(config.config_file_name)
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = None
+
+
+from db.models import Base
+target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
+
+# This will override sqlalchemy.url of the alembic.ini file
+config.set_main_option("sqlalchemy.url", "sqlite:///temp.db") 
 
 
 def run_migrations_offline():

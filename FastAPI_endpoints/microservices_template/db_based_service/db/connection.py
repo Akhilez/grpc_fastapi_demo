@@ -6,4 +6,3 @@ from secrets import db_path
 engine = create_engine(db_path)
 
 Session = sessionmaker(bind=engine)
-
