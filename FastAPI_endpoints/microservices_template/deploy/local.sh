@@ -9,7 +9,7 @@ cd $DIR/db_based_service
 python rpc_server.py &
 
 # base stuff
-cd $DIR/base_services
+cd $DIR/base_service
 uvicorn main:app --reload &
 
 jobs
