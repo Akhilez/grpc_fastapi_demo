@@ -3,6 +3,7 @@ import grpc
 from proto_files.structures_pb2_grpc import SampleServiceServicer, add_SampleServiceServicer_to_server
 from proto_files.structures_pb2 import SampleResponse
 
+
 class SampleServiceService(SampleServiceServicer):
     def SampleMethod(self, request, context):
         print("This was hit")
